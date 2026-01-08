@@ -1,3 +1,16 @@
+function SetLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    const elements = document.querySelectorAll("[textLang]");
+    elements.forEach(function(el) {
+        const key = el.getAttribute("textLang");
+
+        if (LANGS[lang] && LANGS[lang][key] !== undefined) {
+            el.innerHTML = LANGS[lang][key];
+        }
+    });
+}
+
 function SetMobileMenu(){
     const menuToggle = document.querySelector('.menu-toggle');
     
@@ -18,6 +31,7 @@ function SetMobileMenu(){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    SetLanguage("bg");
     SetMobileMenu();
 });
 
