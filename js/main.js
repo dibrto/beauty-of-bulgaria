@@ -1,20 +1,25 @@
-// mobile menu
-const menuToggle = document.querySelectorAll('.menu-toggle');
-const nav = document.querySelectorAll('#main-nav');
-menuToggle.forEach(btn => {
-    btn.addEventListener('click', () => {
+function SetMobileMenu(){
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    menuToggle.addEventListener('click', () => {
         const navEl = document.querySelector('#main-nav');
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
         navEl.classList.toggle('open');
-        // If we're closing the menu, collapse any opened submenus
+
         if (expanded) {
             document.querySelectorAll('.sub').forEach(s => s.style.display = '');
-            document.querySelectorAll('.submenu-toggle').forEach(b => { b.setAttribute('aria-expanded', 'false'); b.classList.remove('open'); });
+            document.querySelectorAll('.submenu-toggle').forEach(b => {
+                b.setAttribute('aria-expanded', 'false');
+                b.classList.remove('open'); 
+            });
         }
     });
-});
+}
 
+document.addEventListener("DOMContentLoaded", function() {
+    SetMobileMenu();
+});
 
 // Lightbox
 const lightbox = document.getElementById('lightbox');
