@@ -23,6 +23,17 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px }
 .submenu-toggle { background: none; border: 0; font-size: 1rem; cursor: pointer; color: var(--dark) }
 .menu-toggle { display: none; background: none; border: 0; font-size: 1.4rem }
 
+/* Header overlay on hero: place header on top of the hero image */
+.site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; background: transparent; padding: .6rem 0 }
+.site-header.banner .header-inner { align-items: center }
+.site-header.banner .logo { color: #fff }
+.site-header.banner .main-nav a { color: #fff }
+
+/* When header not over image (e.g., after scroll) you may want a background; provide a helper class
+.site-header.solid { background: rgba(255,255,255,0.96); }
+.site-header.solid .logo { color: var(--accent) }
+.site-header.solid .main-nav a { color: var(--dark) } */
+
 @media (max-width:800px) {
   .sub { position: static; display: none }
   .sub li { padding: .3rem 0 }
