@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bg">
 
 <head>
@@ -6,65 +6,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Водопади — Красотата на България</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="index.html">Природни забележителности</a>
+            <a class="logo" href="index.html">Природата в България</a>
             <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
             <nav id="main-nav" class="main-nav" role="navigation">
-               <ul>
-                    <li><a href="index.html">Начало</a></li>
+                <ul>
                     <li><a href="mountains.html">Планини</a></li>
-                    <li><a href="waterfalls.html">Водопади</a></li>
+                    <li><a href="waterfalls.html" class="active">Водопади</a></li>
                     <li><a href="caves.html">Пещери</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <article>
-            <h1>Водопади в България</h1>
-            <p>Сред известните водопади са Райското пръскало, Боров камък, Скакля — всеки с характерна красота и
-                достъпност.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Водопади</h1>
+                <p>Водопадите на България – място, където водата танцува сред скалите и горите</p>
+            </div>
+        </section>
 
-            <section class="gallery grid">
-                <h2>Избрани водопади</h2>
-                <img src="images/skakava.svg" alt="Водопад"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/9/9b/Skakava_01.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/9/9b/Skakava_01.jpg'">
-                <img src="images/raiskoto.svg" alt="Райското пръскало"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/8/85/Raiskoto_pryskalo_3.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/8/85/Raiskoto_pryskalo_3.jpg'">
-                <img src="images/borov_kamak.svg" alt="Боров камък"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/6/6c/Borov_kamak_waterfall.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Borov_kamak_waterfall.jpg'">
-            </section>
+        <section class="stats container" aria-label="Бързи факти">
+            <ul class="stats-list">
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fa-solid fa-mountain fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="124">0</strong><span class="stat-unit">м</span></div>
+                        <div class="stat-label">Райско пръскало — най-високият водопад на Балканския полуостров</div>
+                    </div>
+                </li>
 
-            <section>
-                <h2>Съвети за посещение</h2>
-                <p>Някои водопади са труднодостъпни — проверявайте маршрути и екипировка и се движете по маркирани
-                    пътеки.</p>
-            </section>
-        </article>
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fas fa-tree fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="10">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Брой каскади по крушунските водопади</div>
+                    </div>
+                </li>
+
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fa-solid fa-water fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="400">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Водопади и каскадни потоци</div>
+                    </div>
+                </li>
+
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <!-- <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> -->
+                        <i class="fa-solid fa-mountain fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="46">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Водопада в каньона на водопадите в Родопите</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="container">
+            <div class="feature-list">
+                <div class="feature-grid grid">
+
+                    <article class="feature">
+                        <h2>Райското пръскало</h2>
+                        <figure>
+                            <img src="images/raisko_pruskalo.jpg" alt="Райско пръскало">
+                            <figcaption>Най-високият водопад в България и на Балканите</figcaption>
+                        </figure>
+                        <p>
+                            Райското пръскало е най-високият водопад в България с височина около 124 метра. Той се намира
+                            в Централна Стара планина, в Национален парк „Централен Балкан“, и е лесно достъпен чрез
+                            туристически пътеки. Водата му пада от високи скали, създавайки впечатляваща мъгла и дъга в
+                            слънчевите дни. Райското пръскало е най-красиво през пролетта, когато снеговете се топят и
+                            потокът е най-силен. Мястото е популярно за туристически походи и фотография.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Боянски водопад</h2>
+                        <figure>
+                            <img src="images/boyanski_vodopad.jpg" alt="Боянски водопад">
+                            <figcaption>Красив каскаден водопад в планината Витоша</figcaption>
+                        </figure>
+                        <p>
+                            Боянският водопад се намира близо до София и е висок около 25 метра, като се състои от три
+                            нива. Той е леснодостъпен чрез туристическа пътека от квартал Бояна и предлага чудесни
+                            гледки към гората и планината. Водопадът е особено впечатляващ през пролетта, когато
+                            снеговете и дъждовете увеличават водния поток. Районът около него е подходящ за пикници,
+                            фотография и кратки разходки сред природата. Мястото е любимо както за семейни разходки,
+                            така и за любители на планински преходи.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Крушунски водопади</h2>
+                        <figure>
+                            <img src="images/krushunski_vodopadi.jpg" alt="Крушунски водопади">
+                            <figcaption>Комплекс от каскадни водопади сред красиви скали и зеленина</figcaption>
+                        </figure>
+                        <p>
+                            Крушунските водопади са комплекс от над 10 малки каскадни водопада, разположени близо до село
+                            Крушуна, Ловешка област. Водата тече през множество тераси и образува малки езера и басейни,
+                            което прави мястото изключително живописно. Районът е известен с пещерите и буйната
+                            растителност, което го прави подходящ за еко-туризъм и фотография. Най-силно впечатление
+                            водопадите правят през пролетта, когато водният поток е най-мощен. Мястото привлича хиляди
+                            туристи всяка година.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Сувчарско Пръскало</h2>
+                        <figure>
+                            <img src="images/suvcharkso_pruskalo.jpg" alt="Сувчарско Пръскало">
+                            <figcaption>Впечатляващ водопад с 54 м пад в Средна Стара планина</figcaption>
+                        </figure>
+                        <p>
+                            Сувчарско Пръскало се намира в Средна Стара планина, близо до село Христо Даново, и е част от Национален парк „Централен
+                            Балкан“. Водопадът има директен пад на около 54 метра, което го прави един от по-високите и впечатляващи водопади в
+                            България. Водата се спуска от скален венец и се разбива в малко естествено езерце в подножието. Най-впечатляващ е през
+                            пролетта, когато снеговете се топят и потокът е най-силен. Мястото е популярно за туристи, любители на природата и
+                            фотографи, търсещи красиви водни гледки.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Скакля</h2>
+                        <figure>
+                            <img src="images/skaklya.jpg" alt="Скакля">
+                            <figcaption>Един от най-високите скални водопади в България</figcaption>
+                        </figure>
+                        <p>
+                            Скакля е водопад с височина около 70 метра, разположен в Тетевенския Балкан. Той представлява
+                            ледниково образувание и е особено впечатляващ през пролетта. Водата пада директно от скала,
+                            образувайки каскадни потоци и красиви мъгли. Местността е предпочитана за туристи и
+                            планинари, които обичат по-трудни маршрути. През ранните сутрешни часове и вечер водопадът
+                            предлага магическа атмосфера, когато слънчевите лъчи осветяват падащата вода.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Красотата на България</p>
-        </div>
-    </footer>
-
-    <button id="backToTop" class="back-to-top" title="Нагоре">↑</button>
     <div id="lightbox" class="lightbox" aria-hidden="true">
         <div class="lightbox-content">
             <button class="lightbox-close" aria-label="Затвори">✕</button>
             <img src="" alt="">
         </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Красотата на България</p>
+        </div>
+    </footer>
 </body>
 
 </html>
