@@ -8,8 +8,8 @@
 body { font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; line-height: 1.6; color: var(--dark); margin: 0 }
 
 /* Accessibility focus */
-a:focus,
-button:focus { outline: 2px dashed var(--accent); outline-offset: 2px }
+/* a:focus,
+button:focus { outline: 2px dashed var(--accent); outline-offset: 2px } */
 
 .container { max-width: 1000px; margin: 0 auto; padding: 1rem }
 .header-inner { display: flex; align-items: center; justify-content: space-between }
@@ -24,13 +24,13 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px }
 .menu-toggle { display: none; background: none; border: 0; font-size: 1.4rem }
 
 /* Header overlay on hero: place header on top of the hero image */
-.site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; background: transparent; padding: .6rem 0 }
+.site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; padding: .6rem 0 }
 .site-header.banner .header-inner { align-items: center }
 .site-header.banner .logo { color: #fff }
-.site-header.banner .main-nav a { color: #fff }
+.site-header.banner .menu-toggle { color: #fff; }
 
-/* When header not over image (e.g., after scroll) you may want a background; provide a helper class
-.site-header.solid { background: rgba(255,255,255,0.96); }
+/* When header not over image (e.g., after scroll) you may want a background; provide a helper class */
+/* .site-header.solid { background: rgba(255,255,255,0.96); }
 .site-header.solid .logo { color: var(--accent) }
 .site-header.solid .main-nav a { color: var(--dark) } */
 
