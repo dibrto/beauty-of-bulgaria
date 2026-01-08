@@ -14,7 +14,7 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px } */
 .container { max-width: 1000px; margin: 0 auto; padding: 1rem }
 .header-inner { display: flex; align-items: center; justify-content: space-between }
 .logo { font-weight: 700; color: var(--accent); text-decoration: none }
-.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem }
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem;}
 .main-nav a { color: var(--dark); text-decoration: none }
 .has-sub { position: relative }
 .sub { position: absolute; left: 0; top: 100%; background: #fff; border: 1px solid #e8e8e8; padding: .5rem; display: none; min-width: 160px }
@@ -28,6 +28,7 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px } */
 .site-header.banner .header-inner { align-items: center }
 .site-header.banner .logo { color: #fff }
 .site-header.banner .menu-toggle { color: #fff; }
+.site-header.banner .main-nav a { color: #fff }
 
 /* When header not over image (e.g., after scroll) you may want a background; provide a helper class */
 /* .site-header.solid { background: rgba(255,255,255,0.96); }
@@ -76,7 +77,9 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px } */
   .gallery .grid { grid-template-columns: repeat(2, 1fr) }
   .menu-toggle { display: block }
   .main-nav { display: none }
-  .main-nav.open { display: block; background: #fff; position: absolute; right: 1rem; top: 60px; padding: 1rem; border-radius: 6px; border: 1px solid #eee }
+  .main-nav ul { flex-direction: column; }
+  .main-nav.open { display: block; background: #fff; position: absolute; right: 1rem; top: 60px; padding: 1rem; border-radius: 6px; border: 1px solid #eee; }
+  .site-header.banner .main-nav a { color: #000 }
   .has-sub:hover .sub { display: none }
   .sub { position: static }
 }
