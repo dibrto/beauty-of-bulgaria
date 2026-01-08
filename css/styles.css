@@ -111,7 +111,8 @@ button:focus { outline: 2px dashed var(--accent); outline-offset: 2px } */
 }
 
 /* Lightbox */
-.lightbox { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center }
+.lightbox { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; text-align: center; justify-content: center; }
+.lightbox img { max-width: 1200px; }
 .lightbox-close { position: absolute; right: 1rem; top: 1rem; background: transparent; color: #fff; border: 0; font-size: 1.4rem }
 
 /* Responsive */
