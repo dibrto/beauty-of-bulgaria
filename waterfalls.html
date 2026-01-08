@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bg">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Водопади — Красотата на България</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Природни забележителности</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+            <nav id="main-nav" class="main-nav" role="navigation">
+               <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="mountains.html">Планини</a></li>
+                    <li><a href="waterfalls.html">Водопади</a></li>
+                    <li><a href="caves.html">Пещери</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Водопади в България</h1>
+            <p>Сред известните водопади са Райското пръскало, Боров камък, Скакля — всеки с характерна красота и
+                достъпност.</p>
+
+            <section class="gallery grid">
+                <h2>Избрани водопади</h2>
+                <img src="images/skakava.svg" alt="Водопад"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/9/9b/Skakava_01.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/9/9b/Skakava_01.jpg'">
+                <img src="images/raiskoto.svg" alt="Райското пръскало"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/8/85/Raiskoto_pryskalo_3.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/8/85/Raiskoto_pryskalo_3.jpg'">
+                <img src="images/borov_kamak.svg" alt="Боров камък"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/6/6c/Borov_kamak_waterfall.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/6/6c/Borov_kamak_waterfall.jpg'">
+            </section>
+
+            <section>
+                <h2>Съвети за посещение</h2>
+                <p>Някои водопади са труднодостъпни — проверявайте маршрути и екипировка и се движете по маркирани
+                    пътеки.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Красотата на България</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Нагоре">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Затвори">✕</button>
+            <img src="" alt="">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

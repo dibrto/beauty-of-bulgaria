@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bg">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Красотата на България</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Природни забележителности</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+            <nav id="main-nav" class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="mountains.html">Планини</a></li>
+                    <li><a href="waterfalls.html">Водопади</a></li>
+                    <li><a href="caves.html">Пещери</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Открийте природните чудеса на България</h1>
+                <p>Кратка курсова демонстрация на страница, представяща планини, водопади и пещери.</p>
+                <a class="cta" href="#highlights">Разгледай</a>
+            </div>
+        </section>
+
+        <section id="highlights" class="container highlights">
+            <article>
+                <h2>Планини</h2>
+                <p>България е дом на впечатляващи планински вериги – Рила, Пирин, Стара планина и много други.</p>
+                <a href="mountains.html" class="btn">Виж повече</a>
+            </article>
+            <article>
+                <h2>Водопади</h2>
+                <p>От високи каскади до тихи падини — водопадите са сред най-красивите природни атракции.</p>
+                <a href="waterfalls.html" class="btn">Виж повече</a>
+            </article>
+            <article>
+                <h2>Пещери</h2>
+                <p>Пещерите в България пазят интересни образувания и археологически находки.</p>
+                <a href="caves.html" class="btn">Виж повече</a>
+            </article>
+        </section>
+
+        <section id="gallery" class="container gallery">
+            <h2>Мини галерия</h2>
+            <div class="grid">
+                <img src="images/rila.jpg" alt="Рила">
+                <img src="images/pirin.jpg" alt="Пирин">
+                <img src="images/skakava.jpg" alt="Водопад">
+            </div>
+        </section>       
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Красотата на България</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Нагоре">↑</button>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Затвори">✕</button>
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

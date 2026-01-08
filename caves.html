@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="bg">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пещери — Красотата на България</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+     <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Природни забележителности</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+            <nav id="main-nav" class="main-nav" role="navigation">
+               <ul>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="mountains.html">Планини</a></li>
+                    <li><a href="waterfalls.html">Водопади</a></li>
+                    <li><a href="caves.html">Пещери</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Пещери в България</h1>
+            <p>Пещерите като Магура, Проходна и Леденика предлагат уникални карстови образувания и исторически находки.
+            </p>
+
+            <section class="gallery grid">
+                <h2>Интересни пещери</h2>
+                <img src="images/magura.svg" alt="Пещера Магура"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/0/0d/Magura_Cave.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/0/0d/Magura_Cave.jpg'">
+                <img src="images/prohodna.svg" alt="Пещера Проходна"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/4/46/Prohodna_cave_03.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/4/46/Prohodna_cave_03.jpg'">
+                <img src="images/ledenika.svg" alt="Пещера Леденика"
+                    data-large="https://upload.wikimedia.org/wikipedia/commons/b/b5/Ledenika_Cave.jpg"
+                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/b/b5/Ledenika_Cave.jpg'">
+            </section>
+
+            <section>
+                <h2>Защита и безопасност</h2>
+                <p>Носете фенер, спазвайте забраните и не оставяйте отпадъци в пещерите.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Красотата на България</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Нагоре">↑</button>
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Затвори">✕</button>
+            <img src="" alt="">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
