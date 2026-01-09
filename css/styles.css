@@ -284,9 +284,9 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 .rounded-bg::before {
 	content: '';
 	position: absolute;
-	transform: translateX(13%);
+	right: 0;
 	background: linear-gradient(180deg, var(--light-gray) 30%, var(--main-white) 100%);
-	width: 100%;
+	width: 80%;
 	height: 60%;
 	border-radius: 256px 0 0 0;
 }
