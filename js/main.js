@@ -12,26 +12,26 @@
 // }
 
 function SetMobileMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector(".menu-toggle");
 
-    menuToggle.addEventListener('click', () => {
-        const navEl = document.querySelector('#main-nav');
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!expanded));
-        navEl.classList.toggle('open');
+    menuToggle.addEventListener("click", () => {
+        const navEl = document.querySelector("#main-nav");
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        navEl.classList.toggle("open");
 
         if (expanded) {
-            document.querySelectorAll('.sub').forEach(s => s.style.display = '');
-            document.querySelectorAll('.submenu-toggle').forEach(b => {
-                b.setAttribute('aria-expanded', 'false');
-                b.classList.remove('open');
+            document.querySelectorAll(".sub").forEach(s => s.style.display = "");
+            document.querySelectorAll(".submenu-toggle").forEach(b => {
+                b.setAttribute("aria-expanded", "false");
+                b.classList.remove("open");
             });
         }
     });
 }
 
 function StatsCounter(){
-    const statsEl = document.querySelector('.stats');
+    const statsEl = document.querySelector(".stats");
     if (!statsEl) return;
 
     const animateNumber = (el, target) => {
@@ -43,7 +43,7 @@ function StatsCounter(){
             if (!startTime) startTime = timestamp;
             const progress = Math.min((timestamp - startTime) / duration, 1);
             const value = Math.floor(progress * (target - start) + start);
-            el.textContent = value.toLocaleString('bg-BG');
+            el.textContent = value.toLocaleString("bg-BG");
             if (progress < 1) requestAnimationFrame(step);
         };
         requestAnimationFrame(step);
@@ -52,11 +52,11 @@ function StatsCounter(){
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll('.stat-number').forEach(n => {
-                    const target = parseInt(n.getAttribute('data-target'), 10) || 0;
+                document.querySelectorAll(".stat-number").forEach(n => {
+                    const target = parseInt(n.getAttribute("data-target"), 10) || 0;
                     if (n.dataset.animated) return;
                     animateNumber(n, target);
-                    n.dataset.animated = '1';
+                    n.dataset.animated = "1";
                 });
                 obs.disconnect();
             }
@@ -66,23 +66,25 @@ function StatsCounter(){
     observer.observe(statsEl);
 }
 
+function SetupLightbox(){
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox?.querySelector("img");
+    const closeBtn = lightbox?.querySelector(".lightbox-close");
+    document.querySelectorAll(".gallery img, .grid img").forEach(img => {
+        img.addEventListener("click", () => {            
+            lightboxImg.src = img.dataset.large || img.src;
+            lightboxImg.alt = img.alt || "";
+            lightbox.style.display = "flex";
+            lightbox.setAttribute("aria-hidden", "false");
+        })
+    });
+    closeBtn?.addEventListener("click", () => { lightbox.style.display = "none"; lightbox.setAttribute("aria-hidden", "true"); });
+    lightbox?.addEventListener("click", (e) => { if (e.target === lightbox) { lightbox.style.display = "none"; lightbox.setAttribute("aria-hidden", "true"); } });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // SetLanguage("bg");
     SetMobileMenu();
     StatsCounter();
+    SetupLightbox();
 });
-
-// Lightbox
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = lightbox?.querySelector('img');
-const closeBtn = lightbox?.querySelector('.lightbox-close');
-document.querySelectorAll('.gallery img, .grid img').forEach(img => {
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.dataset.large || img.src;
-        lightboxImg.alt = img.alt || '';
-        lightbox.style.display = 'flex';
-        lightbox.setAttribute('aria-hidden', 'false');
-    })
-});
-closeBtn?.addEventListener('click', () => { lightbox.style.display = 'none'; lightbox.setAttribute('aria-hidden', 'true'); });
-lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) { lightbox.style.display = 'none'; lightbox.setAttribute('aria-hidden', 'true'); } });
