@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dibrto.github.io/beauty-of-bulgaria/sitemap.xml
