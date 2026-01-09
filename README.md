@@ -1,6 +1,5 @@
 # Красотата на България
-
-## Live Demo (Deployed Version)
+### Live Demo (Deployed Version)
 - **Production Website:** https://dibrto.github.io/beauty-of-bulgaria
 - **GitHub Repository:** https://github.com/dibrto/beauty-of-bulgaria
  
