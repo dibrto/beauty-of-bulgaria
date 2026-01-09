@@ -1,10 +1,13 @@
 :root {
-	--main-page-color: #2b8a7c;
-	--page-gradient-start: linear-gradient(rgba(43, 138, 124, 0.06), rgba(255, 255, 255, 0.1));
-	--icon-gradient: linear-gradient(180deg, var(--main-page-color), #1f6f63);
+	--main-white: #fdfdfd;
+	--light-gray: #f7f7f7;
 	--dark: #21303a;
 	--muted: #6b7b84;
 	--hover: #ececec;
+	
+	--main-page-color: #2b8a7c;
+	--page-gradient-start: linear-gradient(rgba(43, 138, 124, 0.06), rgba(255, 255, 255, 0.1));
+	--icon-gradient: linear-gradient(180deg, var(--main-page-color), #1f6f63);
 	--container-box-shadow-hover: rgba(24, 24, 24, 0.08) 0px 12px 24px -4px, rgba(24, 24, 24, 0.16) 0px 16px 32px -4px;
 }
 
@@ -34,6 +37,7 @@ body {
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
 	line-height: 1.6;
 	color: var(--dark);
+	background-color: var(--main-white);
 	margin: 0
 }
 
@@ -51,7 +55,8 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 .header-inner {
 	display: flex;
 	align-items: center;
-	justify-content: space-between
+	justify-content: space-between;
+	background-color: var(--main-white);
 }
 
 .logo {
@@ -93,77 +98,11 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	font-weight: 700;
 }
 
-.has-sub {
-	position: relative
-}
-
-.sub {
-	position: absolute;
-	left: 0;
-	top: 100%;
-	background: #fff;
-	border: 1px solid #e8e8e8;
-	padding: .5rem;
-	display: none;
-	min-width: 160px
-}
-
-.sub li {
-	padding: 0.2rem 0
-}
-
-.sub a {
-	display: block;
-	padding: .25rem 0
-}
-
-.submenu-toggle {
-	background: none;
-	border: 0;
-	font-size: 1rem;
-	cursor: pointer;
-	color: var(--dark)
-}
-
 .menu-toggle {
 	display: none;
 	background: none;
 	border: 0;
 	font-size: 1.4rem
-}
-
-/* Header overlay on hero: place header on top of the hero image */
-
-/* .site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; padding: .6rem 0 }
-.site-header.banner .header-inner { align-items: center }
-.site-header.banner .logo { color: #fff }
-.site-header.banner .menu-toggle { color: #fff; }
-.site-header.banner .main-nav a { color: #fff } */
-
-/* When header not over image (e.g., after scroll) you may want a background; provide a helper class */
-
-/* .site-header.solid { background: rgba(255,255,255,0.96); }
-.site-header.solid .logo { color: var(--main-page-color) }
-.site-header.solid .main-nav a { color: var(--dark) } */
-@media (max-width:800px) {
-	.sub {
-		position: static;
-		display: none
-	}
-
-	.sub li {
-		padding: .3rem 0
-	}
-
-}
-
-@media (min-width:801px) {
-
-	/* On wider screens, show submenu on hover */
-	.has-sub:hover .sub {
-		display: block
-	}
-
 }
 
 /* hero sec */
@@ -175,7 +114,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	display: flex;
 	padding: 0;
 	position: relative;
-	color: #fff
+	color: var(--main-white);
 }
 
 .hero-index::after {
@@ -203,17 +142,15 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 .hero-index h1 {
 	font-size: 2.4rem;
 	margin: 0 0 .5rem;
-	color: #fff
 }
 
 .hero-index p {
 	margin: 0 0 1rem;
-	color: rgba(255, 255, 255, 0.9)
 }
 
 .hero-index .cta {
 	display: inline-block;
-	background: #fff;
+	background: var(--main-white);
 	color: var(--dark);
 	padding: .6rem 1rem;
 	border-radius: 4px;
@@ -242,7 +179,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	display: flex;
 	gap: 1rem;
 	align-items: center;
-	background: #fff;
+	background: var(--main-white);
 	color: var(--dark);
 	padding: .8rem 1rem;
 	border-radius: 10px;
@@ -265,7 +202,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff
+	color: var(--main-white);
 }
 
 .stat-body {
@@ -334,7 +271,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 .hero.cta {
 	display: inline-block;
 	background: var(--main-page-color);
-	color: #fff;
+	color: var(--main-white);
 	padding: .6rem 1rem;
 	border-radius: 4px;
 	text-decoration: none
@@ -348,7 +285,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	content: '';
 	position: absolute;
 	transform: translateX(13%);
-	background: linear-gradient(180deg, #f7f7f7 30%, #fdfdfd 100%);
+	background: linear-gradient(180deg, var(--light-gray) 30%, var(--main-white) 100%);
 	width: 100%;
 	height: 60%;
 	border-radius: 256px 0 0 0;
@@ -364,9 +301,9 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 }
 
 .highlights article {
-	background: #fff;
+	background: var(--main-white);
 	padding: 1rem;
-	border: 1px solid #eee;
+	border: 1px solid var(--hover);
 	border-radius: 6px
 }
 
@@ -423,7 +360,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 }
 
 .feature + .feature {
-	border-top: 1px solid #eee;
+	border-top: 1px solid var(--hover);
 	padding-top: 1.5rem;
 	margin-top: 1.5rem
 }
@@ -498,7 +435,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	right: 1rem;
 	top: 1rem;
 	background: transparent;
-	color: #fff;
+	color: var(--main-white);
 	border: 0;
 	font-size: 1.4rem
 }
@@ -527,26 +464,14 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 
 	.main-nav.open {
 		display: block;
-		background: #fff;
+		background: var(--main-white);
 		position: absolute;
 		right: 1rem;
 		top: 60px;
 		padding: 1rem;
 		border-radius: 6px;
-		border: 1px solid #eee;
+		border: 1px solid var(--hover);
 		z-index: 5;
-	}
-
-	.site-header.banner .main-nav a {
-		color: #000
-	}
-
-	.has-sub:hover .sub {
-		display: none
-	}
-
-	.sub {
-		position: static
 	}
 
 }
@@ -557,90 +482,6 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 	}
 
 	.hero h1 {
-		font-size: 1.4rem
-	}
-
-}
-
-/* Splash */
-.splash {
-	position: fixed;
-	inset: 0;
-	z-index: 9999;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
-	transition: opacity .45s ease, visibility .45s;
-	opacity: 1;
-	visibility: visible
-}
-
-.splash.hidden {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none
-}
-
-.splash-bg {
-	position: absolute;
-	inset: 0;
-	background-image: url('images/belogradchik.jpg');
-	background-size: cover;
-	background-position: center;
-	filter: brightness(.7);
-	z-index: -1
-}
-
-.splash-content {
-	background: rgba(0, 0, 0, 0.35);
-	color: #fff;
-	padding: 2rem;
-	border-radius: 8px;
-	text-align: center;
-	max-width: 90%;
-	backdrop-filter: blur(3px)
-}
-
-.splash h2 {
-	margin: 0 0 .5rem;
-	font-size: 2rem
-}
-
-.splash p {
-	margin: 0 0 1rem;
-	color: rgba(255, 255, 255, 0.9)
-}
-
-.splash-actions {
-	display: flex;
-	gap: .5rem;
-	justify-content: center;
-	align-items: center
-}
-
-.splash .cta {
-	background: #fff;
-	color: var(--dark);
-	padding: .6rem 1rem;
-	border-radius: 6px
-}
-
-.splash-skip {
-	background: transparent;
-	border: 0;
-	color: #fff;
-	font-size: 1.2rem;
-	padding: .2rem .6rem;
-	cursor: pointer
-}
-
-@media (max-width:480px) {
-	.splash-content {
-		padding: 1rem
-	}
-
-	.splash h2 {
 		font-size: 1.4rem
 	}
 
@@ -672,7 +513,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 
 /* footer */
 .site-footer {
-	background: #f7f7f7;
+	background: var(--light-gray);
 	margin-top: 2rem;
 	color: var(--muted)
 }

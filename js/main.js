@@ -19,14 +19,6 @@ function SetMobileMenu() {
         const expanded = menuToggle.getAttribute("aria-expanded") === "true";
         menuToggle.setAttribute("aria-expanded", String(!expanded));
         navEl.classList.toggle("open");
-
-        if (expanded) {
-            document.querySelectorAll(".sub").forEach(s => s.style.display = "");
-            document.querySelectorAll(".submenu-toggle").forEach(b => {
-                b.setAttribute("aria-expanded", "false");
-                b.classList.remove("open");
-            });
-        }
     });
 }
 
