@@ -168,7 +168,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 
 /* hero sec */
 .hero-index {
-	background-image: url('./images/belogradchik.jpg');
+	background-image: url('../images/belogradchik.jpg');
 	background-size: cover;
 	background-position: center;
 	min-height: 80vh;
