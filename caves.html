@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bg">
 
 <head>
@@ -6,64 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пещери — Красотата на България</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/main.js"></script>
 </head>
 
-<body>
-     <header class="site-header">
+<body class="brown-theme">
+    <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="index.html">Природни забележителности</a>
+            <a class="logo" href="index.html">Природата в България</a>
             <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
             <nav id="main-nav" class="main-nav" role="navigation">
-               <ul>
-                    <li><a href="index.html">Начало</a></li>
+                <ul>
                     <li><a href="mountains.html">Планини</a></li>
                     <li><a href="waterfalls.html">Водопади</a></li>
-                    <li><a href="caves.html">Пещери</a></li>
+                    <li><a href="caves.html" class="active">Пещери</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <article>
-            <h1>Пещери в България</h1>
-            <p>Пещерите като Магура, Проходна и Леденика предлагат уникални карстови образувания и исторически находки.
-            </p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Пещери</h1>
+                <p>Пещерите на България – място, където тишината разказва истории, скрити дълбоко в недрата на земята.</p>
+            </div>
+        </section>
 
-            <section class="gallery grid">
-                <h2>Интересни пещери</h2>
-                <img src="images/magura.svg" alt="Пещера Магура"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/0/0d/Magura_Cave.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/0/0d/Magura_Cave.jpg'">
-                <img src="images/prohodna.svg" alt="Пещера Проходна"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/4/46/Prohodna_cave_03.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/4/46/Prohodna_cave_03.jpg'">
-                <img src="images/ledenika.svg" alt="Пещера Леденика"
-                    data-large="https://upload.wikimedia.org/wikipedia/commons/b/b5/Ledenika_Cave.jpg"
-                    onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/b/b5/Ledenika_Cave.jpg'">
-            </section>
+        <section class="stats container" aria-label="Бързи факти">
+            <ul class="stats-list">
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-up fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="124">0</strong><span class="stat-unit">м</span></div>
+                        <div class="stat-label">Райско пръскало — най-високият водопад на Балканския полуостров</div>
+                    </div>
+                </li>
 
-            <section>
-                <h2>Защита и безопасност</h2>
-                <p>Носете фенер, спазвайте забраните и не оставяйте отпадъци в пещерите.</p>
-            </section>
-        </article>
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fas fa-droplet fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="10">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Брой каскади по крушунските водопади</div>
+                    </div>
+                </li>
+
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <i class="fa-solid fa-water fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="400">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Водопади и каскадни потоци</div>
+                    </div>
+                </li>
+
+                <li class="stat" tabindex="0">
+                    <div class="stat-icon" aria-hidden="true">
+                        <!-- <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg> -->
+                        <i class="fa-solid fa-mountain fa-lg"></i>
+                    </div>
+                    <div class="stat-body">
+                        <div class="stat-value"><strong class="stat-number" data-target="46">0</strong><span class="stat-unit">+</span></div>
+                        <div class="stat-label">Водопада в каньона на водопадите в Родопите</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="container">
+            <div class="feature-list">
+                <div class="feature-grid grid">
+
+                    <article class="feature">
+                        <h2>Дяволското гърло</h2>
+                        <figure>
+                            <img src="images/dqvolskoto_gurlo.jpg" alt="Дяволското гърло">
+                            <figcaption>Пещера, от която водата не намира изход</figcaption>
+                        </figure>
+                        <p>
+                            Дяволското гърло е една от най-мистичните пещери в България, разположена в Родопите край село Триград. Най-известната ѝ
+                            особеност е, че всичко, което попадне във водите ѝ, не излиза обратно, включително и хвърлени предмети. Подземната река
+                            образува мощен водопад, който изчезва в дълбоки сифони с неизяснен край. Това явление е породило множество легенди, сред
+                            които и тази за слизането на Орфей в подземното царство. Дяволското гърло впечатлява посетителите със своята сурова
+                            атмосфера и непрекъснатия тътен на водата.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Деветашка пещера</h2>
+                        <figure>
+                            <img src="images/devetashka_peshtera.jpg" alt="Деветашка пещера">
+                            <figcaption>Впечатляващата Деветашка пещера</figcaption>
+                        </figure>
+                        <p>
+                            Деветашка пещера е една от най-големите и впечатляващи пещери в България, разположена в Северна България близо до село
+                            Деветаки. Тя се отличава с огромни зали, впечатляващи сталактити и сталагмити, както и с естествени отвори, които
+                            пропускат слънчева светлина. Пещерата е била обитавана още от праисторически времена, а археологическите находки
+                            разказват за древни култури. Деветашка пещера е известна и с богатата си фауна, включително колонии от прилепи. Мястото
+                            съчетава природна красота, история и мистерия, което я прави популярна туристическа дестинация.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Леденика</h2>
+                        <figure>
+                            <img src="images/ledenika.jpg" alt="Крушунски водопади">
+                            <figcaption>Пещерата на вечния лед и скалните чудеса</figcaption>
+                        </figure>
+                        <p>
+                            Пещерата Леденика се намира в Северозападна България, близо до Враца, и е известна с впечатляващите си ледени
+                            образования и големи зали. Вътре може да се видят красиви сталактити и сталагмити, както и скални образувания, приличащи
+                            на статуи. Леденика е една от малкото пещери в страната, където през зимата се образуват устойчиви ледени „покривала“.
+                            Тя е популярна туристическа дестинация заради своето величие и мистична атмосфера. Пещерата съчетава природна красота,
+                            уникални форми и усещане за подземна магия.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Съева дупка</h2>
+                        <figure>
+                            <img src="images/saeva_dupka.jpg" alt="Сувчарско Пръскало">
+                            <figcaption>Малкият подземен рай – Съева дупка</figcaption>
+                        </figure>
+                        <p>
+                            Съева дупка е малка, но впечатляваща пещера, разположена в Родопите, близо до град Девин. Тя е известна с красивите си
+                            сталактити и сталагмити, които оформят причудливи скални фигури. Пещерата е лесно достъпна за туристи и предлага
+                            уникално усещане за мистерия и спокойствие. Мястото е популярно както сред любителите на природата, така и сред
+                            фотографите заради впечатляващите светлинни ефекти вътре. Съева дупка съчетава магията на природата с интимната
+                            атмосфера на подземния свят.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <h2>Духлата</h2>
+                        <figure>
+                            <img src="images/duhlata.jpg" alt="Скакля">
+                            <figcaption>Лабиринтът на Родопите – пещерата Духлата</figcaption>
+                        </figure>
+                        <p>
+                            Пещерата Духлата е най-дългата пещера в България, разположена в Западните Родопи близо до село Боснек. Тя впечатлява с
+                            огромните си подземни галерии, многобройни зали и сложна лабиринтна структура. Пещерата е проучвана от учени и
+                            спелеолози, като в нея са открити редки минерални образувания и колонии от прилепи. Духлата предлага усещане за мистерия
+                            и приключение за всеки посетител. Това подземно царство съчетава природна красота, научен интерес и приключенски дух.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Красотата на България</p>
-        </div>
-    </footer>
-
-    <button id="backToTop" class="back-to-top" title="Нагоре">↑</button>
     <div id="lightbox" class="lightbox" aria-hidden="true">
         <div class="lightbox-content">
             <button class="lightbox-close" aria-label="Затвори">✕</button>
             <img src="" alt="">
         </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Красотата на България</p>
+        </div>
+    </footer>
 </body>
 
 </html>
