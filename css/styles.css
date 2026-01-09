@@ -13,6 +13,12 @@
     --icon-gradient: linear-gradient(180deg, var(--main-page-color), #4779e5);
 }
 
+.brown-theme {
+    --main-page-color: #a97e60;
+    --page-gradient-start: linear-gradient(rgba(160, 130, 109, 0.1), rgba(255, 255, 255, 0.1));
+    --icon-gradient: linear-gradient(180deg, var(--main-page-color), #473e31);
+}
+
 * { box-sizing: border-box }
 body { font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; line-height: 1.6; color: var(--dark); margin: 0 }
 
