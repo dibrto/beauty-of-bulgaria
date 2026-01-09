@@ -53,11 +53,11 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
 .menu-toggle { display: none; background: none; border: 0; font-size: 1.4rem }
 
 /* Header overlay on hero: place header on top of the hero image */
-.site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; padding: .6rem 0 }
+/* .site-header.banner { position: absolute; top: 0; left: 0; width: 100%; z-index: 2; padding: .6rem 0 }
 .site-header.banner .header-inner { align-items: center }
 .site-header.banner .logo { color: #fff }
 .site-header.banner .menu-toggle { color: #fff; }
-.site-header.banner .main-nav a { color: #fff }
+.site-header.banner .main-nav a { color: #fff } */
 
 /* When header not over image (e.g., after scroll) you may want a background; provide a helper class */
 /* .site-header.solid { background: rgba(255,255,255,0.96); }
@@ -142,7 +142,7 @@ button:focus { outline: 2px dashed var(--main-page-color); outline-offset: 2px }
   .menu-toggle { display: block }
   .main-nav { display: none }
   .main-nav ul { flex-direction: column; }
-  .main-nav.open { display: block; background: #fff; position: absolute; right: 1rem; top: 60px; padding: 1rem; border-radius: 6px; border: 1px solid #eee; }
+  .main-nav.open { display: block; background: #fff; position: absolute; right: 1rem; top: 60px; padding: 1rem; border-radius: 6px; border: 1px solid #eee; z-index: 5; }
   .site-header.banner .main-nav a { color: #000 }
   .has-sub:hover .sub { display: none }
   .sub { position: static }
